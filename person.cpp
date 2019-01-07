@@ -21,7 +21,7 @@ void person::ChangeName(int year, std::string name)
 {
     if(year < birthYear) return;
 
-    int i = 0;
+    unsigned long i = 0;
 
     for(auto x : states)
     {
@@ -30,8 +30,8 @@ void person::ChangeName(int year, std::string name)
             if(x.ch_name_trig) return;
             else
             {
-                states[static_cast<unsigned long>(i)].name = name;
-                states[static_cast<unsigned long>(i)].ch_name_trig = true;
+                states[i].name = name;
+                states[i].ch_name_trig = true;
                 return;
             }
         }
